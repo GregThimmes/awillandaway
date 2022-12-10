@@ -1,0 +1,66 @@
+/*
+** Testimonial Shortcode
+*/
+
+.fw-testimonial-item {
+  .quote-top {
+    padding: 40px 30px 40px;
+    border: 1px solid $borderColor;
+  }
+  .quote-bottom {
+    margin-top: 30px;
+    display: flex;
+    .quote-image img {
+      width: 80px;
+      border-radius: 50%;
+    }
+    .quote-bottom-content {
+      margin-left: 30px;
+      .quote-name {
+        margin-top: 3px;
+        margin-bottom: 15px;
+      }
+      span {
+        color: $fontColor2;
+      }
+    }
+  }
+  &.show-quotes {
+    &:before {
+      content: "\e917";
+      font-family: 'icomoon';
+      font-size: 39px;
+      color: $darkgreyColor;
+      position: absolute;
+      top: 0px;
+      left: 45px;
+      background-color: $lightColor;
+      padding: 0 10px;
+    }
+    .quote-top {
+      margin-top: 15px;
+      padding-top: 55px;
+    }
+  }
+}
+
+.ls.ms .fw-testimonial-item.show-quotes:before {
+  background-color: $greyColor;
+}
+
+.ds .fw-testimonial-item.show-quotes:before {
+  background-color: $darkgreyColor;
+  color: $lightColor;
+}
+
+.ds.ms .fw-testimonial-item.show-quotes:before {
+  background-color: $darkColor;
+}
+
+.cs .fw-testimonial-item.show-quotes:before {
+  background-color: $colorMain;
+}
+
+.cs.cs2 .fw-testimonial-item.show-quotes:before {
+  background-color: $colorMain2;
+}

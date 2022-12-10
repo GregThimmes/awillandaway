@@ -1,0 +1,6 @@
+2022-12-10T15:36:46+00:00 CRITICAL syntax error, unexpected identifier "fw_ext", expecting "," or ";" in /Users/gregthimmes/Documents/GitHub/awillandaway/wp-content/themes/psycheco/template-parts/topline/topline-1.php on line 39
+
+2022-12-10T15:38:11+00:00 CRITICAL syntax error, unexpected token "<" in /Users/gregthimmes/Documents/GitHub/awillandaway/wp-content/themes/psycheco/template-parts/topline/topline-1.php on line 39
+
+2022-12-10T15:38:37+00:00 CRITICAL syntax error, unexpected token "array", expecting ")" in /Users/gregthimmes/Documents/GitHub/awillandaway/wp-content/themes/psycheco/template-parts/topline/topline-1.php on line 39
+

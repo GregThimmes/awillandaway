@@ -1,0 +1,111 @@
+/*
+** Special Heading
+*/
+.special-heading {
+  word-wrap: break-word;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
+  + .special-heading {
+    margin-top: 18px;
+  }
+}
+
+p.special-heading {
+  line-height: 24px;
+}
+
+h3.special-heading .tag-big {
+  line-height: 1.06;
+}
+
+@media (min-width: 992px) {
+  h3 .tag-big {
+    font-size: 60px;
+  }
+
+  h4 .tag-big {
+    font-size: 51px;
+  }
+
+  h5 .tag-big {
+    font-size: 38px;
+  }
+
+  h6 .tag-big {
+    font-size: 30px;
+  }
+
+  p .tag-big {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 991px) {
+  h3 .tag-big {
+    font-size: 48px;
+  }
+}
+
+.heading-font {
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.body-font {
+  font-family: 'Lato', sans-serif;
+}
+
+.saint-delafield-font {
+  font-family: 'Mrs Saint Delafield', cursive;
+}
+
+.special-heading.subheading + .special-heading {
+  margin-top: 3px;
+}
+
+.fw-section-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 140px;
+  font-weight: 900;
+  color: black;
+  text-transform: uppercase;
+  position: absolute;
+  top: -10px;
+  bottom: 0;
+  left: -3px;
+  pointer-events: none;
+  opacity: 0.02;
+  z-index: 1;
+  @media (max-width: 991px) {
+    display: none;
+  }
+  @media (min-width: 1200px) {
+    font-size: 160px;
+  }
+  p {
+    line-height: 0.94;
+    margin: 0;
+  }
+  &.rotate-heading {
+    font-size: 190px;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    text-align: center;
+    p {
+      line-height: 1;
+    }
+  }
+  &.heading-right {
+    left: auto;
+    right: -25px;
+  }
+  &.heading-left.rotate-heading {
+    top: 0;
+    left: -25px;
+  }
+}
+
+.background-gradient .fw-section-heading p,
+.cs .fw-section-heading p {
+  color: black;
+}

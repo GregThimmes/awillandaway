@@ -1,0 +1,64 @@
+/* bootstrap breadcrumbs*/
+.breadcrumb {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 14px;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  & > li {
+    display: inline-block;
+    padding: 0;
+    float: none;
+    color: $lightColor;
+    a {
+      color: $colorMain;
+      &:hover {
+        color: $lightColor;
+      }
+    }
+  }
+
+  .text-center & {
+    justify-content: center;
+  }
+  @media (min-width: 992px) {
+    .text-lg-right & {
+      justify-content: flex-end;
+    }
+  }
+   @media (min-width: 992px) {
+    .text-lg-left & {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0;
+  &:before {
+    content: '/';
+    font-family: "FontAwesome";
+    color: $lightColor;
+    font-size: 14px;
+    padding: 0 6px;
+    @media (min-width: 768px) {
+      padding: 0 21px;
+    }
+  }
+}
+
+.ls {
+  .breadcrumb {
+    > li {
+      color: $darkgreyColor;
+      a:hover {
+        color: $darkgreyColor;
+      }
+    }
+    .breadcrumb-item + .breadcrumb-item:before {
+      color: $darkgreyColor;
+    }
+  }
+}

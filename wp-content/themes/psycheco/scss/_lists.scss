@@ -1,0 +1,140 @@
+ul, ol {
+  padding-left: 1.15rem;
+}
+
+ul {
+  list-style: disc;
+}
+
+ul ul {
+  list-style-type: circle;
+}
+
+ul ul ul {
+  list-style-type: revert;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+.list-bordered {
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  li {
+    padding-top: 14px;
+    padding-bottom: 13px;
+    border-top: 1px solid $borderColorRGBA;
+    border-bottom: 1px solid $borderColorRGBA;
+  }
+  li + li {
+    border-top: none;
+  }
+  &.no-top-border > li:first-child {
+    border-top: none;
+  }
+  &.no-bottom-border > li:last-child {
+    border-bottom: none;
+  }
+}
+
+ul.list-styled:last-child,
+ol.list-styled:last-child {
+  margin-bottom: 0;
+}
+
+ul.list-styled,
+ol.list-styled {
+  position: relative;
+  li {
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0
+    }
+  }
+}
+
+.list-styled ul,
+ul.list-styled {
+  list-style: none;
+  padding: 0;
+  color: $fontColor;
+  margin-bottom: 23px;
+  li {
+    position: relative;
+    padding: 7px 0 8px 30px;
+    &:before {
+      content: "\f00c";
+      font-family: "FontAwesome";
+      font-size: 14px;
+      line-height: 1;
+      position: absolute;
+      left: 0;
+      margin-top: 7px;
+      color: $colorMain3;
+    }
+  }
+}
+
+ol.list-styled {
+  padding: 0;
+  counter-reset: li;
+  margin-bottom: 30px;
+  list-style: none outside none;
+  li {
+    padding: 7px 0 8px 30px;
+      &:before {
+      content: counter(li, decimal) ".";
+      counter-increment: li;
+      position: absolute;
+      left: 0;
+      font-weight: 900;
+      color: $colorMain3;
+    }
+  }
+}
+
+.list-icons.list-bordered .icon-inline {
+  align-items: center;
+  padding-left: 8px;
+  > * {
+    flex: 1 1;
+  }
+  .icon-left {
+    display: flex;
+    align-items: center;
+    max-width: 38%;
+    .icon-styled {
+      margin-right: 20px;
+    }
+  }
+}
+
+.list-icons:not(.list-bordered) {
+  list-style: none;
+  padding-left: 0;
+  .fw-icon-title {
+    margin-right: 10px;
+  }
+  li + li {
+    padding-top: 19px;
+  }
+  a {
+    color: $fontColor;
+    &:hover {
+      color: $colorMain;
+    }
+  }
+}
+
+.post h2 + ul ,
+.post h2 + ol, {
+  margin-top: 30px;
+}

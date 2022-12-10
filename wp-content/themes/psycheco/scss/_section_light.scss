@@ -1,0 +1,42 @@
+.ls {
+
+  .color-icon.bg-icon {
+    background-color: #ececec;
+  }
+
+  .shortcode-video-button a.photoswipe-link:hover i {
+    color: $darkgreyColor;
+  }
+
+  b, strong {
+    color: $darkgreyColor;
+  }
+
+  nav.navigation.post-navigation.items-nav {
+    b, strong {
+      color: $lightColor;
+    }
+  }
+
+  .format-status:not(.content-padding),
+  .format-quote:not(.content-padding) {
+    .tagcloud a,
+    .entry-meta .inline-content a {
+      color: $darkgreyColor;
+    }
+  }
+
+  .video-link:after {
+    color: $darkgreyColor;
+  }
+
+  form .has-placeholder label + [class*="fa-"] {
+    color: $darkgreyColor;
+  }
+
+  .fw-steps .step:first-child:after,
+  .fw-steps .step:before {
+    background-color: $darkgreyColor;
+  }
+
+}

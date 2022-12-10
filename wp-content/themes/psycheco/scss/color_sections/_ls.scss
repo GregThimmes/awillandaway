@@ -1,0 +1,75 @@
+/*
+** Light Background Section - .ls
+*/
+.ls {
+  background-color: $lightColor;
+  color: $fontColor;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $darkgreyColor;
+    a {
+      color: inherit;
+      &:hover {
+        color: $fontColor;
+      }
+    }
+  }
+
+  .color-main {
+    color: $colorMain;
+    border-color: $colorMain;
+  }
+  .color-light {
+    color: $lightColor !important;
+    border-color: $lightColor;
+  }
+
+  .comments-area.hero-bg {
+    .comment-form textarea, .comment-form input {
+      background-color: $backgroundColor;
+      border-color: #b4b4b4;
+    }
+  }
+
+}
+
+/*
+** Grey Background Section - light section, muted section - .ls.ms
+*/
+.ls.ms {
+  background-color: $greyColor;
+
+  .links-grey a {
+    color: $darkgreyColor;
+  }
+
+  .hero-bg {
+    background-color: $lightColor;
+    hr {
+      background-color: $borderColor;
+    }
+  }
+
+  hr {
+    background-color: $lightColor;
+  }
+
+  td,
+  th,
+  .bordered {
+    border-color: darken($borderColor, 5%);
+  }
+
+  .btn-secondary {
+    border-color: $lightColor;
+    &:hover {
+      border-color: $darkgreyColor;
+      background-color: $darkgreyColor;
+    }
+  }
+
+}

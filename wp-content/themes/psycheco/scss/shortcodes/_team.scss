@@ -1,0 +1,88 @@
+/*
+** Team Extension
+*/
+
+.member-position {
+  font-size: 13px;
+  color: $colorMain;
+  margin-bottom: 1.8em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.team-carousel {
+  .owl-stage-outer {
+    padding-top: 20px;
+    margin-top: -20px;
+  }
+}
+
+.single-fw-team {
+  .member-image {
+    width: 100%;
+  }
+  .member-summary {
+    padding: 38px 35px 30px;
+    .member-title {
+      margin-bottom: 7px;
+      line-height: 1;
+    }
+  }
+  .item-content {
+    padding-top: 39px;
+    @media (min-width: 992px) {
+      padding-top: 24px;
+    }
+    .bootstrap-tabs {
+      margin: 3.5em 0;
+    }
+  }
+}
+
+.team-member {
+  &.padding-small .item-content {
+    padding: 38px 35px 30px;
+  }
+  .member-position {
+    font-weight: 300;
+  }
+  .member-name {
+    line-height: 1;
+    margin-bottom: 7px;
+  }
+  .member-excerpt + .social-icons {
+    display: block;
+    margin-top: 25px;
+  }
+}
+
+.vertical-item.team-member2 {
+  position: relative;
+  transition: 0.5s all;
+  &:hover {
+    transform: translateY(-20px);
+  }
+  .media-links:before {
+    display: none;
+  }
+  .item-content {
+    padding-bottom: 40px;
+  }
+  .member-name {
+    margin-top: -6px;
+    margin-bottom: 20px;
+  }
+  .member-position {
+    color: $fontColor2;
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: unset;
+    margin-bottom: 12px;
+  }
+  a.fa[class*="fa-"] {
+    color: $fontColor2;
+    &:hover {
+      color: $colorMain;
+    }
+  }
+}

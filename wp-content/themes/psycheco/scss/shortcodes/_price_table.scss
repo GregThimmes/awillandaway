@@ -1,0 +1,195 @@
+.pricing-plan {
+  text-align: center;
+  transition: .5s all;
+  &.plan-default .plan-content {
+    padding: 53px 50px 60px;
+    box-shadow: $boxShadow;
+  }
+  .plan-name {
+    line-height: 1.05;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .price-wrap {
+    margin-top: 0;
+    &[class*='bg-'] {
+      padding: 15px 30px 18px;
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+    h6 {
+      margin: 0;
+      line-height: inherit;
+    }
+    .plan-price {
+      font-size: 55px;
+    }
+    .plan-sign {
+      display: inline-block;
+      font-size: 32px;
+      margin: 0;
+      position: relative;
+      top: 0;
+      right: -7px;
+    }
+    .plan-rate {
+      font-size: 14px;
+      color: $lightColor;
+      font-weight: 300;
+      display: inline-block;
+      border: 2px solid $lightColor;
+      padding: 0 23px;
+      margin-top: 15px;
+    }
+  }
+  [class*='bg-'] {
+    padding: 10px 30px 30px;
+    margin-left: -41px;
+    margin-right: -41px;
+  }
+  .plan-name {
+    &[class*='bg-'] {
+      padding-top: 30px;
+      margin-top: -40px;
+    }
+    h5 {
+      line-height: 1;
+    }
+  }
+
+  @media(min-width: 1200px) {
+    [class*='bg-'] {
+      margin-left: -51px;
+      margin-right: -51px;
+    }
+    .plan-name[class*='bg-'] {
+      margin-top: -92px;
+    }
+  }
+  .plan-features {
+    font-family: "Playfair Display", serif;
+    margin-top: 16px;
+    ul {
+      list-style: none;
+      padding-left: 0;
+      li {
+        padding: 13px 0;
+        position: relative;
+        border-bottom: 1px solid $borderColor;
+        &.enabled:before,
+        &.disabled:before {
+          font-family: 'FontAwesome';
+          content: "\f00c";
+          font-size: 14px;
+          color: $colorMain;
+          position: relative;
+          padding-right: 13px;
+          top: 1px;
+        }
+        &.disabled:before {
+          font-family: 'FontAwesome';
+          content: "\f00d";
+        }
+      }
+    }
+  }
+  .plan-button {
+    margin-top: 18px;
+  }
+  &.plan-featured {
+    position: relative;
+    z-index: 5;
+  }
+  &.cs {
+    .plan-features ul li:before {
+      color: $lightColor;
+    }
+  }
+}
+
+.plan-badge {
+  color: $lightColor;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: absolute;
+  max-width: 40px;
+  width: 40px;
+  top: 0;
+  left: 30px;
+  padding: 24px 5px;
+  background: $colorMain;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    border-left: 20px solid $colorMain;
+    border-right: 20px solid $colorMain;
+    border-bottom: 15px solid transparent;
+  }
+  span {
+    display: block;
+    position: relative;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+  }
+}
+
+.pricing-plan.plan-layout3 {
+  text-align: left;
+  .price-content {
+    padding: 43px 50px 50px;
+  }
+  .plan-decimals {
+    margin-top: 20px;
+  }
+  .price-wrap {
+    .plan-sign {
+      font-size: 40px;
+      right: 0;
+    }
+    .plan-price {
+      font-size: 40px;
+    }
+  }
+  .plan-name {
+    h5 {
+      color: $fontColor;
+      font-weight: 400;
+      margin-top: 16px;
+    }
+  }
+  div.plan-features {
+    font-family: inherit;
+    padding-top: 17px;
+    margin-top: 27px;
+    border-top: 1px solid $borderColor;
+    li {
+      border: 0;
+      padding: 6px 0;
+      &:before {
+        font-family: 'icomoon';
+        content: "\e915";
+        color: $colorMain;
+        line-height: 0.1em;
+        position: relative;
+        display: inline-block;
+        top: 1px;
+        padding-right: 15px;
+      }
+      &.enabled:before {
+        content: "\e905";
+        color: $fontColor2;
+        font-size: 10px;
+      }
+      &.disabled:before {
+        color: $colorDanger;
+        transform: rotate(45deg);
+        top: 7px;
+      }
+    }
+  }
+  .plan-button {
+    margin-top: 34px;
+  }
+}

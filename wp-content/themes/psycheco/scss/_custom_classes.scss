@@ -1,0 +1,148 @@
+/*
+** Custom Classes
+*/
+
+.page_footer.footer-col-1 .menu_wide {
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      .menu-image {
+        order: -1;
+        padding-top: 0;
+        margin-bottom: 25px;
+      }
+    }
+    .menu-image {
+      a {
+        font-size: 0;
+      }
+    }
+    > li {
+      padding: 10px 0;
+      border: 0;
+      @media (min-width: 768px) {
+        padding: 0 10px;
+      }
+      a {
+        padding: 0;
+      }
+    }
+  }
+}
+
+#fw-buttons {
+  a.btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+[class*="col-"].column-padding {
+  padding: 0 15px;
+  @media (min-width: 1200px) {
+    padding-left: 100px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .image-big img {
+    max-width: 110%;
+    position: relative;
+    left: -45px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .form-lg-small {
+    .form-wrapper.input-big .form-control {
+      height: 40px;
+    }
+    .wrap-forms {
+      margin-top: 0;
+    }
+    .btn.btn-big {
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
+  }
+}
+
+.icons-animated .col-lg-3 {
+  &:first-child .media-left-type {
+    &:last-child .icon-styled:before {
+      animation-duration: 9s;
+      transform: rotate(45deg);
+    }
+    .icon-styled:before {
+      animation-duration: 10s;
+      transform: rotate(110deg);
+    }
+  }
+  .media-left-type:last-child .icon-styled:before {
+    animation-duration: 6s;
+    transform: rotate(90deg);
+  }
+}
+
+.blob-effect {
+  &:before {
+    content: '';
+    position: absolute;
+    background: $greyColor;
+    width: 70%;
+    height: 110%;
+    left: -100px;
+    animation: bulb 13s linear infinite;
+  }
+}
+
+.lh-big {
+  line-height: 1.4;
+}
+
+.cover-image-large {
+  @media (min-width: 992px) {
+    .cover-image.s-cover-left {
+      width: 54.1%;
+    }
+  }
+}
+
+.blockquote-style.icon-inline {
+  @media (min-width: 768px) {
+    max-width: 80%;
+  }
+  > .icon-styled:first-child {
+    margin-right: 30px;
+  }
+}
+
+.background-gradient {
+  background-color: transparent;
+  background: linear-gradient(to right,$colorMain2 37%, $darkColor 20% 100%);
+}
+
+@media (min-width: 992px) {
+  .ml-lg-125 {
+    margin-left: 125px;
+  }
+}
+
+@media (max-width: 767px) {
+  .has-md-container.container-px-0 [class*='container'] {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.btn.small-sm {
+  @media (max-width: 991px) {
+    padding: 11px 23px;
+    margin-top: -20px;
+  }
+}

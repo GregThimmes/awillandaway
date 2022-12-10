@@ -1,0 +1,317 @@
+/*
+** General Styles for HTML tags
+*/
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+::selection {
+  color: $lightColor;
+  background-color: $colorMain;
+}
+
+::-moz-selection {
+  color: $lightColor;
+  background-color: $colorMain;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $fontColor;
+  background-color: $lightColor;
+  overflow: visible;
+  overflow-x: hidden;
+  //for scrollbar always seen
+  overflow-y: scroll;
+  //for scrollspy
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  word-break: break-word;
+  margin-top: 20px;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 4rem;
+}
+
+h2 {
+  font-size: 51px;
+  line-height: 3.5rem;
+}
+
+
+h3 {
+  font-size: 38px;
+  line-height: 3rem;
+}
+
+h4 {
+  font-size: 30px;
+  line-height: 3rem;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 3rem;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+@media (max-width: 479px) {
+  h1 {
+    font-size: 2.441rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.953rem;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 1.563rem;
+    line-height: 1.2;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+
+  h5 {
+    font-size: 1rem;
+    line-height: 1;
+  }
+  h6 {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 24px;
+}
+
+ul:last-child,
+ol:last-child,
+p:last-child {
+  margin-bottom: 0;
+}
+
+p:last-child {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+img:not(.embed-img), figure {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  p {
+    margin-bottom: 0;
+  }
+  font-size: 0.95em;
+  line-height: 1.4;
+  padding: 10px 0 7px;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+label {
+  color: $darkgreyColor;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out 0s;
+  color: $colorMain;
+  &:hover {
+    color: $darkgreyColor;
+    text-decoration: none;
+    transition: all 0.15s linear 0s;
+  }
+}
+
+blockquote {
+  font-family: "Playfair Display", serif;
+  display: block;
+  margin: 44px auto;
+  padding: 0;
+  max-width: 750px;
+  font-style: italic;
+  font-size: 29px;
+  font-weight: 600;
+  line-height: 1.2;
+  cite {
+    font-family: "Lato", sans-serif;
+    display: block;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0;
+    line-height: 1.1;
+    color: $colorMain;
+  }
+  &.hero-bg {
+    padding: 30px 35px;
+    @media (min-width: 768px) {
+      padding: 55px 58px;
+    }
+  }
+}
+
+input:focus,
+button:focus,
+select:focus,
+textarea:focus,
+a:focus {
+  outline: medium none;
+  text-decoration: none;
+}
+
+a > img {
+  transition: all 0.15s ease-in-out 0s;
+}
+
+a:hover > img {
+  opacity: 0.8;
+}
+
+hr {
+  border-color: $borderColor;
+  //for flexbox
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+iframe {
+  border: none;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin: 10px 0;
+  td, th {
+    padding: 13px 8px;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    border: 1px solid $borderColor;
+  }
+  th {
+    color: $darkgreyColor;
+    font-weight: normal;
+    vertical-align: middle;
+  }
+}
+
+.wp-block-table,
+.wp-block-table.is-style-stripes {
+  td, th {
+    border-color: $borderColor;
+  }
+}
+
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+pre {
+  line-height: 1.5;
+  background-color: $universalBackgroundColor;
+  padding: 0.5em 1em;
+}
+//block with signature on main page
+.big {
+  margin: 0 0 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  @media (min-width: 768px) {
+    margin: 0 0 32px;
+  }
+  em {
+    display: inline-block;
+    margin: 0.3em 0 0;
+    @media (min-width:768px) {
+      margin: 1em 0 0.5em;
+
+    }
+  }
+}
+
+.media {
+  h3 {
+    text-transform: uppercase;
+  }
+  .dropcap {
+    margin-right: 0;
+  }
+}
+
+.small-text {
+  @include small-text();
+  &.extra-letter-spacing {
+    @media (min-width: 768px) {
+      letter-spacing: 1em;
+    }
+  }
+}
+
+.shortcode-btn {
+  .btn {
+    @media (max-width: 1199px) {
+      margin-bottom: 5px;
+    } 
+  }
+}

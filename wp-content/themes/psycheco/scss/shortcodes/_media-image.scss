@@ -1,0 +1,85 @@
+/*
+** Media image
+*/
+
+///image before image
+.images-wrap-item {
+  position: relative;
+  display: inline-block;
+  img {
+    &:first-child {
+      position: relative;
+      z-index: 1;
+    }
+    &.second-image {
+      position: absolute;
+      bottom: -125px;
+      left: -215px;
+      border: 10px solid $lightColor;
+      z-index: 5;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  &.img-right {
+    margin-left: 0;
+    margin-right: 5px;
+    margin-bottom: 30px;
+    img {
+      &.second-image {
+        left: auto;
+        right: -15px;
+        bottom: -30px;
+      }
+    }
+    @media (min-width: 992px) {
+      margin-right: 215px;
+      margin-bottom: 125px;
+      img {
+        &.second-image {
+          left: auto;
+          right: -215px;
+          bottom: -125px;
+        }
+      }
+    }
+  }
+  &.img-left {
+    margin-bottom: 30px;
+    margin-left: 5px;
+    img {
+      &.second-image {
+        bottom: -30px;
+        left: -15px;
+      }
+    }
+    @media (min-width: 992px) {
+      margin-bottom: 125px;
+      margin-left: 215px;
+      img {
+        &.second-image {
+          bottom: -125px;
+          left: -215px;
+        }
+      }
+    }
+  }
+  a:hover > img {
+    opacity: 1;
+  }
+  &.img-blob-effect:before {
+    content: "";
+    background-color: $greyColor;
+    display: inline-block;
+    position: absolute;
+    left: -60px;
+    top: -60px;
+    width: calc(100% + 120px);
+    height: calc(100% + 120px);
+    border-radius: 74% 26% 16% 84% / 25% 76% 24% 75%;
+    animation: bulb 10s linear infinite;
+    z-index: 0;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+}

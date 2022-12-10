@@ -1,0 +1,325 @@
+/*
+** Bootstrap Overrides
+*/
+@import 'override_bootstrap/breadcrumbs';
+@import 'override_bootstrap/forms';
+@import 'override_bootstrap/carousel';
+@import 'override_bootstrap/tabs';
+@import 'override_bootstrap/collapse';
+@import 'override_bootstrap/dropdowns';
+
+//making container 1170px width for wide screens
+@media (min-width: 1300px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+//other bootstrap elements
+/* modal */
+.modal-open {
+  padding-right: 0 !important;
+}
+
+.modal-backdrop {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, transparent 50%, $darkgreyColor 50%);
+  background-size: 100% 200%;
+  transition: background-position 0.5s;
+}
+
+.modal-backdrop.show {
+  background-position: 0 -100%;
+  opacity: 0.9;
+}
+
+.modal-content {
+  border-radius: 1px;
+  [class*="col-"]:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.team_contact_form  {
+  @media (min-width: 576px) {
+    .modal-dialog {
+      max-width: 600px;
+    }
+  }
+  .modal-body {
+    padding: 50px;
+  }
+}
+
+.modal-open {
+  cursor: url('../img/cursor.png'), auto;
+  padding-right: 0 !important;
+}
+
+.modal-content {
+  border-radius: 0;
+  cursor: default;
+}
+
+/* media elements */
+.media > img {
+  display: block;
+}
+
+.media-body {
+  h3, h4, h5, h6 {
+    line-height: 1;
+    margin-top: 5px;
+    margin-bottom: 19px;
+  }
+  * + &,
+  & + * {
+    margin-left: 20px;
+  }
+}
+
+//for media component inside table - for dashboard
+td .media-body {
+  width: auto;
+}
+
+// our custom video placeholser
+.embed-responsive {
+  background-color: $darkgreyColor;
+}
+
+.embed-responsive-3by2 {
+  //height property removed in v4
+  height: 0;
+  padding-bottom: 50%;
+  background-color: $darkColor;
+  a > img {
+    opacity: 1;
+  }
+  a:hover > img {
+    opacity: 1;
+  }
+}
+
+.embed-placeholder,
+.video-link {
+  &:after {
+    font-family: "rt-icons-2";
+    content: "\e696";
+    position: absolute;
+    color: $lightColor;
+    font-size: 30px;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover:after {
+    opacity: 0.4;
+  }
+}
+
+.embed-placeholder:after {
+  @media (max-width: 767px) {
+    line-height: 47px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.link-inline-item {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.video-popup-wrapper {
+  position: relative;
+  display: inline-block;
+  &.has-image {
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $darkColor;
+      opacity: 0.4;
+    }
+    a:hover > img {
+      opacity: 1;
+    }
+  }
+  &.without-image {
+    .video-popup-link2 {
+      position: static;
+      background-color: $colorMain2;
+    }
+  }
+}
+
+.video-popup-link2 {
+  background-color: $lightColor;
+  display: inline-block;
+  text-align: center;
+  line-height: 60px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s cubic-bezier(0.2, 0, 0.3, 1);
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  &:before {
+    content: "\f04b";
+    font-family: 'FontAwesome';
+    font-size: 12px;
+    color: $darkgreyColor;
+    margin-left: 4px;
+  }
+}
+
+.alert {
+  font-family: "Playfair Display", serif;
+  border-radius: 0;
+  border-width: 0;
+  padding: 17px 45px 17px 53px;
+  margin-bottom: 10px;
+  color: $lightColor;
+  text-transform: uppercase;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:before {
+    //content: "";
+    font-family: "FontAwesome";
+    position: relative;
+    top: 0;
+    left: -12px;
+    font-size: 14px;
+  }
+}
+
+.alert-light {
+  color: $fontColor;
+}
+
+.alert-success {
+  background-color: $colorSuccess;
+  &:before {
+    content: "\f058";
+  }
+}
+
+.alert-info {
+  background-color: $colorInfo;
+  &:before {
+    content: "\f06a";
+  }
+}
+
+.alert-warning {
+  color: $darkgreyColor;
+  background-color: $colorWarning;
+  &:before {
+    content: "\f071";
+  }
+}
+
+.alert-danger {
+  background-color:$colorDanger;
+  &:before {
+    content: "\f057";
+  }
+}
+
+.mark, mark {
+  background-color: transparent;
+}
+
+button.close {
+  min-width: 0;
+}
+
+/* small in headings */
+.h1 .small,
+.h1 small,
+.h2 .small,
+.h2 small,
+.h3 .small,
+.h3 small,
+.h4 .small,
+.h4 small,
+.h5 .small,
+.h5 small,
+.h6 .small,
+.h6 small,
+h1 .small,
+h1 small,
+h2 .small,
+h2 small,
+h3 .small,
+h3 small,
+h4 .small,
+h4 small,
+h5 .small,
+h5 small,
+h6 .small,
+h6 small {
+  color: inherit;
+  font-weight: 300;
+}
+
+/* labels */
+.label-success {
+  color: $lightColor;
+  background-color: $colorSuccess;
+}
+
+.label-info {
+  color: $lightColor;
+  background-color: $colorInfo;
+}
+
+.label-warning {
+  color: $lightColor;
+  background-color: $colorWarning;
+}
+
+.label-danger {
+  color: $lightColor;
+  background-color: $colorDanger;
+}
+
+.card {
+  border: 0;
+  border-radius: 0 !important;
+}
+
+.container-px-30 .container-fluid .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+mark {
+  padding: 0;
+}
+
+.wp-block-cover-image-text, .wp-block-cover-text, section.wp-block-cover-image h2 {
+  color: $lightColor !important;
+}
+
+.wp-block-group.has-background + a.more-link {
+  margin-top: 25px;
+}
+
+.gallery-caption, .wp-caption {
+  .wp-caption-text {
+    color: $darkgreyColor;
+  }
+}

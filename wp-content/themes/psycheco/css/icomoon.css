@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon/icomoon.eot");
+  src: url("../fonts/icomoon/icomoon.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/icomoon/icomoon.ttf") format("truetype"),
+  url("../fonts/icomoon/icomoon.woff") format("woff"),
+  url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ico-"], [class*=" ico-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-angle-right:before {
+  content: "\e900";
+}
+.ico-anti-stress:before {
+  content: "\e901";
+}
+.ico-brain:before {
+  content: "\e902";
+}
+.ico-brain2:before {
+  content: "\e903";
+}
+.ico-calendar:before {
+  content: "\e904";
+}
+.ico-check:before {
+  content: "\e905";
+}
+.ico-clock:before {
+  content: "\e906";
+}
+.ico-clock2:before {
+  content: "\e907";
+}
+.ico-comment:before {
+  content: "\e908";
+}
+.ico-comment2:before {
+  content: "\e909";
+}
+.ico-couples:before {
+  content: "\e90a";
+}
+.ico-edit:before {
+  content: "\e90b";
+}
+.ico-envelope:before {
+  content: "\e90c";
+}
+.ico-eye:before {
+  content: "\e90d";
+}
+.ico-heart:before {
+  content: "\e90e";
+}
+.ico-learn:before {
+  content: "\e90f";
+}
+.ico-map2:before {
+  content: "\e911";
+}
+.ico-minus:before {
+  content: "\e912";
+}
+.ico-phone:before {
+  content: "\e913";
+}
+.ico-plus:before {
+  content: "\e915";
+}
+.ico-post-divorse:before {
+  content: "\e916";
+}
+.ico-quote:before {
+  content: "\e917";
+}
+.ico-start:before {
+  content: "\e918";
+}
+.ico-map:before {
+  content: "\e910";
+}
+.ico-phone2:before {
+  content: "\e914";
+}
+.ico-alert:before {
+  content: "\e91d";
+}
+.ico-congratulations:before {
+  content: "\e91e";
+}
+.ico-Information:before {
+  content: "\e91f";
+}
+.ico-error:before {
+  content: "\e920";
+}

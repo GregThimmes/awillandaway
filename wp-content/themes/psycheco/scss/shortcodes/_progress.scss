@@ -1,0 +1,113 @@
+/*
+** Progress Bars
+*/
+
+.progress-title {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: left;
+  padding-right: 35px;
+}
+
+.progress {
+  font-family: "Playfair Display", serif;
+  background-color: $greyColor;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  height: 5px;
+  margin-bottom: 20px;
+  margin-top: 2px;
+  overflow: visible;
+  position: relative;
+  &:last-child {
+    margin-bottom: 10px;
+  }
+  .progress-bar {
+    box-shadow: none;
+    color: inherit;
+    height: 5px;
+    transition: width 0.5s ease 0.2s;
+    span {
+      font-size: 16px;
+      position: absolute;
+      right: 0;
+      top: -34px;
+    }
+  }
+  [data-transitiongoal] {
+    width: 0;
+  }
+}
+//.media.media-left-type .media-body
+.progress-icon-box.media {
+  .media-body {
+    margin-left: 25px;
+    @media (min-width: 992px) {
+      margin-left: 45px;
+    }
+  }
+  .progress-title {
+    font-size: 20px;
+    text-transform: unset;
+    margin-top: -9px;
+  }
+}
+
+.progress2 {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  height: 2px;
+  margin-top: 2px;
+  margin-left: 50px;
+  margin-bottom: 35px;
+  overflow: visible;
+  position: relative;
+  p.progress-percent {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    position: absolute;
+    top: -14px;
+    left: -50px;
+  }
+  &:last-child {
+    margin-bottom: 10px;
+  }
+  .progress-bar {
+    position: relative;
+    height: 2px;
+    transition: width 0.5s ease 0.2s;
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      background-color: $lightColor;
+      border: 2px solid $colorDanger;
+      border-radius: 5px;
+    }
+    &.bg-success:before {
+      border-color: $colorSuccess;
+    }
+    &.bg-info:before {
+      border-color: $colorInfo;
+    }
+    &.bg-warning:before {
+      border-color: $colorWarning;
+    }
+    &.bg-maincolor:before {
+      border-color: $colorMain;
+    }
+    &.bg-maincolor2:before {
+      border-color: $colorMain2;
+    }
+  }
+  [data-transitiongoal] {
+    width: 0;
+  }
+}

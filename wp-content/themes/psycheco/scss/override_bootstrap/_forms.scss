@@ -1,0 +1,427 @@
+/* forms */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select,
+.form-control {
+  font-size: 14px;
+  color: $darkColor;
+  height: 50px;
+  width: 100%;
+  border: 1px solid $borderColor;
+  background-color: transparent;
+  border-radius: 2px;
+  padding: 9px 25px;
+  background-clip: inherit !important;
+}
+
+.form-wrapper {
+  &.white-bg .form-control {
+    background-color: $lightColor;
+  }
+  &.white-border .form-control {
+    border-color: $lightColor;
+  }
+  &.input-big {
+    .form-control {
+      padding: 9px 20px;
+      height: 60px;
+      border-radius: 0;
+    }
+    textarea.form-control {
+      padding: 20px;
+      height: auto;
+    }
+    label + [class*="ico-"] + .form-control,
+    label + [class*="fa-"] + .form-control {
+      padding-left: 55px;
+    }
+  }
+  &.grey-bg .form-control {
+    background-color: $greyColor;
+  }
+  &.grey-bg .form-control {
+    border-color: $greyColor;
+  }
+  &.color-bg .form-control {
+    background-color: $colorMain;
+  }
+  &.color-border .form-control {
+    border-color: $colorMain;
+  }
+  &.color2-bg .form-control {
+    background-color: $colorMain2;
+  }
+  &.color2-border .form-control {
+    border-color: $colorMain2;
+  }
+}
+
+input[disabled] {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+[type="submit"],
+button {
+  cursor: pointer;
+}
+
+[type="submit"],
+button {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 16px 20px;
+  border: 2px solid $colorMain;
+  background-color: $colorMain;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out 0s;
+  &:hover {
+    color: $colorMain;
+    background-color: transparent;
+  }
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: 50px !important;
+}
+
+form.fw_form_fw_form {
+  button {
+    padding: 16px 28px;
+  }
+}
+
+textarea,
+textarea.form-control {
+  padding: 21px 21px 21px 25px;
+  height: auto;
+}
+
+.form-group {
+  position: relative;
+
+  [class*='col-'] > & {
+    margin-bottom: 0;
+  }
+
+  [class*='col-'] > & + & {
+    margin-top: 10px;
+  }
+}
+
+.has-placeholder {
+  label {
+    display: none;
+  }
+}
+
+/* select styling */
+select[multiple] {
+  height: auto;
+}
+
+select option,
+.form-control option {
+  color: $darkgreyColor;
+  background-color: $lightColor;
+}
+
+.form-control-unstyled {
+  border: none;
+  background-color: transparent;
+}
+
+.form-control, .form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control.invalid {
+  -webkit-box-shadow: 0 0 0 2px $colorMain;
+  box-shadow: 0 0 0 2px $colorMain;
+}
+
+.form-control:focus {
+  border-color: darken($borderColor, 15%);
+  background-color: transparent;
+}
+
+.form-control:-moz-placeholder {
+  color: $fontColor;
+  opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+  font-size: 0.9em;
+  font-style: italic;
+  color: $fontColor;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  font-size: 0.9em;
+  font-style: italic;
+  color: $fontColor;
+}
+
+.form-control::-webkit-input-placeholder {
+  font-size: 0.9em;
+  font-style: italic;
+  color: $fontColor;
+}
+
+.form-control:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.form-control:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.form-control:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-control:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+/*icons for forms */
+form label + [class*="ico-"],
+form label + [class*="fa-"] {
+  position: absolute;
+  font-size: 16px;
+  left: 28px;
+  top: 60px;
+  width: 1em;
+  text-align: center;
+  pointer-events: none;
+}
+
+//.has-placeholder class has .form-group elements
+form .has-placeholder label + [class*="ico-"],
+form .has-placeholder label + [class*="fa-"] {
+  top: 17px;
+}
+
+form .has-placeholder.form-textarea label + [class*="ico-"],
+form .has-placeholder.form-textarea label + [class*="fa-"] {
+  top: 22px;
+}
+
+form label + [class*="ico-"] + .form-control,
+form label + [class*="fa-"] + .form-control {
+  padding-left: 55px;
+}
+
+form .has-placeholder.datepicker-form label + [class*="ico-"],
+form .has-placeholder.datepicker-form label + [class*="fa-"] {
+  top: 17px;
+  right: 16px;
+  left: auto;
+}
+
+.form-wrapper.input-big .has-placeholder.datepicker-form label + {
+  [class*="ico-"],
+  [class*="fa-"] {
+    top: 21px;
+    right: 18px;
+    left: auto;
+  }
+}
+
+
+.form-wrapper.input-big .datepicker-form label +,
+form .has-placeholder.datepicker-form label + {
+  [class*="ico-"] + .form-control,
+  [class*="fa-"] + .form-control {
+    padding-left: 25px;
+    padding-right: 35px;
+  }
+}
+
+label {
+  //font-weight: inherit;
+  @include small-text();
+  .checkbox &,
+  .radio & {
+    font-weight: inherit;
+  }
+
+  .checkbox &[for],
+  .radio &[for] {
+    font-weight: inherit;
+    cursor: pointer;
+  }
+}
+
+label[for]{
+  cursor: pointer;
+}
+
+.checkbox,
+.radio {
+  label[for] + input[type=checkbox],
+  label[for] + input[type=radio] {
+    left: 20px;
+  }
+  .form-check {
+    padding: 0;
+  }
+}
+
+input[type=checkbox],
+input[type=radio] {
+  margin-top: 8px;
+}
+
+//for wordpress widgets wrapper
+.form-wrapper {
+  &.hero-bg,
+  &.muted-bg,
+  &.cs,
+  &.ds,
+  &.ls {
+    padding: 35px;
+  }
+}
+
+//styled checkboxes and radio
+.has-error .form-control {
+  border-color: $colorMain;
+}
+
+.has-error label,
+.has-error .help-block {
+  color: $colorMain;
+}
+
+/*styled checkbox */
+.checkbox {
+  input[type="checkbox"] {
+    display: none;
+  }
+  label + input[type="checkbox"],
+  label > input[type="checkbox"] {
+    display: inline-block;
+  }
+}
+
+input[type="checkbox"] + label {
+  padding-left: 0;
+}
+
+input[type="checkbox"] + label > a {
+  color: $darkgreyColor;
+}
+
+input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin: 1px 10px 4px 0;
+  text-align: center;
+  padding-right: 0.1em;
+  width: 16px;
+  height: 16px;
+  line-height: 14px;
+  font-size: 10px;
+  text-indent: 3px;
+  border: 1px solid $borderColor;
+  font-family: "FontAwesome";
+}
+
+input[type="checkbox"]:checked + label:before {
+  content: "\f00c";
+  color: $colorMain;
+}
+
+input[type="checkbox"]:disabled + label:before {
+  background-color: $borderColor;
+}
+
+/*styled radio*/
+.radio {
+  input[type="radio"] {
+    display: none;
+  }
+  label + input[type="radio"],
+  label > input[type="radio"] {
+    display: inline-block;
+  }
+}
+
+input[type="radio"] + label {
+  padding-left: 0;
+}
+
+input[type="radio"] + label > a {
+  color: #999999;
+}
+
+input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid $borderColor;
+}
+
+input[type="radio"]:checked + label:before {
+  padding: 3px;
+  background-color: $colorMain;
+  background-clip: content-box;
+}
+
+input[type="radio"]:disabled + label:before {
+  background-color: $borderColor;
+}
+
+.bootstrap-datetimepicker-widget {
+  .btn-primary {
+    background: $colorMain;
+    border-color: $colorMain;
+    &:hover {
+      background: transparent;
+      color: $darkgreyColor;
+    }
+  }
+}
+
+.form-error,
+.fw-messages-wrap .fw-flash-type-error {
+  list-style: none;
+  margin-top: 20px;
+  color: $colorDanger;
+}
+
+.form-phone .form-wrapper .form-group {
+  input {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 20px;
+    color: $darkgreyColor;
+    padding-left: 80px !important;
+  }
+  i {
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: $colorMain2;
+    color: $lightColor;
+  }
+}

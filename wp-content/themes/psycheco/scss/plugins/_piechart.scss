@@ -1,0 +1,90 @@
+/*
+** Easy pieChart
+*/
+
+.chart {
+  position: relative;
+  display: inline-block;
+  min-height: 150px;
+  min-width: 150px;
+  margin-bottom: 10px;
+  text-align: center;
+
+  .chart-meta {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-34%);
+
+    h4 {
+      font-size: 20px;
+      margin: 0;
+      letter-spacing: 0.2em;
+    }
+  }
+  p {
+    font-weight: 600;
+  }
+}
+
+.percent {
+  display: inline-block;
+  font-size: 60px;
+  font-weight: 400;
+  z-index: 2;
+}
+
+.percent:after {
+  content: '%';
+}
+
+.angular {
+  margin-top: 100px;
+  .chart {
+    margin-top: 0;
+  }
+}
+
+.counter-box {
+  position: relative;
+  overflow: hidden;
+  h3 {
+    margin-bottom: 0;
+    + .counter-content {
+      margin-top: 13px;
+    }
+  }
+  @media (min-width: 992px) {
+
+    &.counter-border-right,
+    &.counter-border-left {
+      padding-left: 20px;
+      padding-right: 20px;
+      &:before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: calc(100% - 37px);
+        left: 0;
+        bottom: 10px;
+        background: $lightColor;
+        opacity: 0.4;
+      }
+      &.counter-border-right:before {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}
+
+.ls .counter-box {
+  &.counter-border-right:before,
+  &.counter-border-left:before {
+    background: $darkgreyColor;
+  }
+}
+
+.ds .counter-box {
+  border-color: rgba($lightColor, 0.4) !important;
+}

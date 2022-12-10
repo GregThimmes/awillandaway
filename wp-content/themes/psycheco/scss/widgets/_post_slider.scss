@@ -1,0 +1,25 @@
+/*.widget_slider*/
+
+.widget_slider {
+  .vertical-item .item-media+.item-content {
+    padding-top: 20px;
+  }
+  .owl-carousel .owl-nav {
+    top: 30%;
+  }
+  h4:first-child {
+    text-transform: none;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .cat-links {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin-bottom: -4px;
+  }
+  .owl-carousel {
+    overflow: hidden;
+  }
+}

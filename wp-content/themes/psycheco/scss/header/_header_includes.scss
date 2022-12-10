@@ -1,0 +1,129 @@
+/*header includes*/
+.top-includes {
+  //for ul.top-includes
+  margin: 0;
+  padding: 0;
+
+  //media for topline top includes
+  @media (min-width: 992px) {
+    white-space: nowrap;
+
+  }
+  > * {
+    display: inline-block;
+  }
+  //margins between top includes elements
+  > li {
+    margin-left: 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &.border-divided {
+    @media(min-width: 992px) {
+      > li + li {
+        border-left: 1px solid $universalBorderColor;
+        padding-top: 1px;
+        margin-left: 30px;
+        padding-left: 19px;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    .top-nav + & {
+      margin-left: 50px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    &.md-absolute {
+      position: absolute;
+      bottom: 0;
+      //place for mobile toggler
+      right: 80px;
+    }
+  }
+
+  a.border-icon,
+  a.bg-icon,
+  a.color-bg-icon {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+}
+
+.main-includes i {
+  margin-right: 5px;
+}
+
+.top-includes {
+  .shop-dropdown {
+    margin-right: 21px;
+    @media (max-width: 767px) {
+      .dropdown-menu-right {
+        right: auto;
+        left: 13px;
+      }
+    }
+  }
+
+}
+
+.top-includes .fw-icon-title {
+  font-weight: 500;
+}
+
+.page_topline {
+  .icon-list {
+    li {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      + li {
+        margin-left: 0;
+        @media (min-width: 768px) {
+          &:before {
+            content: '|';
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+    .icon-inline > * {
+      margin-right: 0;
+    }
+    .icon-styled {
+      margin-right: 8px;
+    }
+    .fw-icon-title.color-darkgrey {
+      font-size: 14px;
+      color: $fontColor;
+    }
+    a {
+      color: $fontColor;
+      &:hover {
+        color: $colorMain;
+      }
+    }
+  }
+  .social-icons {
+  }
+}
+
+.page_topline.topline-1 .row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  .form-login {
+    a.highlight {
+      font-size: 14px;
+      text-transform: uppercase;
+      + .highlight {
+        &:before {
+          content: '|';
+          display: inline-block;
+          padding: 0 11px 0 7px;
+        }
+      }
+    }
+  }
+}

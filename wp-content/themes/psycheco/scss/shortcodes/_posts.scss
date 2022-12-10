@@ -1,0 +1,137 @@
+/*
+** Posts Extension
+*/
+
+.fw-posts {
+
+  .layout-item-extended {
+    .content-padding .item-content {
+      @media (min-width: 620px) {
+        padding: 30px 70px 56px;
+      }
+    }
+    .item-content {
+      .entry-meta {
+        margin-top: -11px;
+        margin-bottom: 4px;
+        @media (min-width: 620px) {
+          margin-top: 3px;
+        }
+      }
+      .item-title {
+        line-height: 1.4;
+        margin-bottom: 28px;
+        height: 2.7em;
+        overflow: hidden;
+      }
+      .btn {
+        margin-top: 34px;
+      }
+    }
+  }
+
+  .owl-item,
+  .isotope-item {
+    &:nth-child(3n+2) {
+      .post-date a {
+        color: $colorMain2;
+        &:hover {
+          color: $colorMain;
+        }
+      }
+      .btn-outline-maincolor {
+        color: $colorMain2;
+        border-color: $colorMain2;
+        &:hover {
+          color: $lightColor;
+          background-color: $colorMain2;
+        }
+      }
+    }
+    &:nth-child(3n) {
+      .post-date a {
+        color: $colorMain3;
+        &:hover {
+          color: $colorMain;
+        }
+      }
+      .btn-outline-maincolor {
+        color: $colorMain3;
+        border-color: $colorMain3;
+        &:hover {
+          color: $lightColor;
+          background-color: $colorMain3;
+        }
+      }
+    }
+  }
+
+}
+
+.layout-item-title {
+  .entry-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.65;
+  }
+  .entry-meta {
+    font-size: 14px;
+    > span {
+      font-size: 14px;
+      color: $fontColor2;
+      margin-right: 20px;
+      a {
+        color: $fontColor2;
+        &:hover {
+          color: $colorMain;
+        }
+      }
+    }
+    i {
+      font-size: 12px;
+    }
+    .item-views-word {
+      display: none;
+    }
+  }
+}
+
+.layout-item-regular2 {
+  .item-meta {
+    margin-bottom: 18px;
+    a:hover {
+      color: $lightColor;
+      opacity: 0.8;
+    }
+  }
+  .entry-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    > span {
+      font-size: 14px;
+      margin-right: 20px;
+      i {
+        font-size: 12px;
+        color: $colorMain2;
+      }
+      .like_button {
+        i:before {
+          content: "\e90e";
+          font-family: 'icomoon';
+        }
+      }
+    }
+    .item-views-word,
+    .item-likes-word {
+      display: none;
+    }
+  }
+}
+
+.ls .layout-item-title .entry-title a {
+  color: $darkgreyColor;
+  &:hover {
+    color: $colorMain;
+  }
+}

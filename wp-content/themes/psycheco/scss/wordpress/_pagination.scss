@@ -1,0 +1,163 @@
+/*
+** WordPress Page Links and Pagination
+*/
+.page-item,
+.nav-links,
+.page-links {
+  clear: both;
+  & > span,
+  & > a {
+    border: 1px solid $borderColor;
+    color: $fontColor;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 0;
+    padding: 0 8px;
+    min-width: 40px;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: 400;
+    border-radius: 50px;
+    &:hover {
+      border-color: $colorMain;
+      color: $fontColor;
+    }
+    &.dots {
+      cursor: not-allowed;
+      background-color: transparent;
+      color: $darkColor;
+      position: relative;
+      top: -3px;
+      left: 2px;
+      letter-spacing: 2px;
+      border-color: transparent;
+      font-size: 24px;
+    }
+    &.page-links-title {
+      background-color: transparent;
+      border: 0;
+      color: $darkgreyColor;
+    }
+  }
+  &.active > a,
+  & > span {
+    border-color: $colorMain;
+    color: $fontColor;
+  }
+  .fa {
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
+//page and comments links smaller
+.comments-pagination,
+.page-links {
+  .page-numbers,
+  & > span,
+  a {
+    //min-width: 2em;
+  }
+}
+
+.page-links a:first-child {
+  margin-left: 1em;
+}
+
+//blog styles
+.pagination {
+  margin-top: 60px;
+}
+
+
+//blog post
+.navigation.post-navigation.items-nav {
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    a + a {
+      margin-top: 15px;
+    }
+  }
+  @media (min-width: 992px) {
+    margin-top: 40px;
+  }
+  & > a {
+    height: auto;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    @media (min-width: 768px) {
+      width: 50%;
+      text-align: left;
+      &[rel*="prev"] {
+        margin-right: 5px;
+        margin-left: 0;
+        + a {
+          margin-left: 5px;
+        }
+      }
+      &[rel*="next"] {
+        margin-left: auto;
+        text-align: right;
+      }
+    }
+    .nav-item {
+      height: 100%;
+      padding: 28px 30px;
+      transition: 0.2s opacity ease;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media (min-width: 1200px) {
+        padding: 33px 40px 56px;
+      }
+      .nav-middle {
+        position: relative;
+        z-index: 1;
+        .nav {
+          display: block;
+          font-size: 13px;
+          font-weight: 400;
+          letter-spacing: .2em;
+          text-transform: uppercase;
+          color: $colorMain;
+        }
+        .title {
+          font-weight: 500;
+          line-height: 1.1;
+          color: $lightColor;
+          margin-top: 10px;
+          transition: 0.3s ease;
+        }
+      }
+      .nav-overlay:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: 0.5;
+        transition: 0.3s ease;
+      }
+      &:hover {
+        h5.title {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  //for .cover-image
+  .post-nav-image {
+    display: none;
+  }
+}
+
+.page-links {
+  margin-top: 30px;
+}

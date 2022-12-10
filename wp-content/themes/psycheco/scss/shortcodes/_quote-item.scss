@@ -1,0 +1,218 @@
+.testimonials-slider.owl-carousel {
+  display: flex;
+  flex-direction: column-reverse;
+  .owl-dots {
+    margin-top: 0;
+    margin-bottom: 39px;
+  }
+
+  .quote-item {
+    text-align: center;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: 768px) {
+      max-width: 65%;
+    }
+    .quote-image {
+      position: relative;
+      display: inline-block;
+      img {
+        border-radius: 50%;
+        max-width: 250px;
+      }
+    }
+    .quote-content {
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.1;
+      margin-bottom: 23px;
+    }
+    .quote-meta {
+      font-size: 20px;
+      color: $lightColor;
+    }
+  }
+}
+
+.ls .testimonials-slider .quote-item .quote-meta {
+ color: $darkgreyColor;
+}
+
+.testimonials-slider2.owl-carousel {
+  .quote-item {
+    border: 1px solid $borderColor;
+    padding: 40px 30px 35px;
+    text-align: center;
+    @media (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+      text-align: left;
+    }
+    @media (min-width: 1400px) {
+      padding: 75px 45px 75px 70px;
+    }
+    .quote-image {
+      flex-shrink: 0;
+      max-width: 250px;
+      margin: 0 auto 20px;
+      @media (min-width: 1200px) {
+        margin: 20px;
+      }
+      img {
+        border-radius: 50%;
+      }
+    }
+    .quote-content {
+      flex: 1;
+      margin-left: 0;
+      @media (min-width: 1200px) {
+        margin-left: 43px;
+        margin-top: -35px;
+      }
+      .quote-name {
+        margin-top: 0;
+        margin-bottom: 19px;
+      }
+      .content {
+        margin-bottom: 15px;
+      }
+      .quote-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @media (max-width: 1199px) {
+          justify-content: center;
+        }
+        > * {
+          margin-right: 10px;
+          margin-bottom: 0;
+        }
+        .quote-date {
+          i {
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+  &.owl-carousel .owl-dots {
+    margin-top: 50px;
+    .owl-dot {
+      width: 8px;
+      height: 8px;
+      margin: 0 10px;
+      span {
+        border: 0;
+        width: 8px;
+        height: 8px;
+        background-color: $fontColor2;
+        opacity: 0.5;
+      }
+      &.active span,
+      &:hover span {
+        background: $colorMain;
+        opacity: 1;
+      }
+    }
+  }
+  .owl-item {
+    opacity: 1 !important;
+  }
+}
+
+.testimonials-wrapper {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+  }
+  .testimonials-custom-nav {
+    display: flex;
+    flex: 0 0 100%;
+    margin: 40px -10px 0;
+    @media (min-width: 768px) {
+      margin: 0 60px 0 -10px;
+      flex: auto;
+    }
+    > div {
+      opacity: 1;
+      background-color: $lightColor;
+      margin: 0 10px;
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      transition: 0.3s all;
+      i {
+        font-size: 10px;
+        color: $darkgreyColor;
+        font-weight: 900;
+      }
+      &:hover {
+        background-color: $darkColor;
+        cursor: pointer;
+        i {
+          color: $lightColor;
+        }
+      }
+    }
+  }
+}
+
+.testimonials-slider3.owl-carousel {
+  .quote-item {
+    background-color: $lightColor;
+    padding: 42px 50px 46px;
+    .quote-content {
+      position: relative;
+      color: $fontColor;
+      margin-bottom: 30px;
+      z-index: 1;
+      &:before {
+        content: "\e917";
+        font-family: 'icomoon';
+        font-size: 40px;
+        color: #EAEAEA;
+        position: absolute;
+        top: -10px;
+        left: -20px;
+        z-index: -1;
+      }
+    }
+    a {
+      color: $darkgreyColor;
+      &:hover {
+        color: $colorMain;
+      }
+    }
+  }
+  .quote-bottom {
+    display: flex;
+    .quote-image {
+      img {
+        max-width: 60px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .quote-bottom-content {
+    margin-left: 20px;
+    h6 {
+      color: $darkgreyColor;
+      margin-top: 3px;
+      margin-bottom: 8px;
+    }
+    .quote-date,
+    .quote-meta {
+      font-size: 14px;
+      color: $fontColor2;
+    }
+  }
+}

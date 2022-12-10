@@ -1,0 +1,743 @@
+/*
+** Intro Section Styles
+*/
+
+.page_slider {
+  position: relative;
+  overflow: hidden;
+  //fix slider bug on small screens
+  clear: both;
+  & > img {
+    width: 100%;
+  }
+
+  .flex-direction-nav .flex-prev {
+    left: 6%;
+    opacity: 1;
+     @media (max-width: 1500px) {
+       left: 40%;
+       transform: translateX(-50%);
+     }
+    &.flex-disabled {
+      opacity: 0.5;
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+  }
+  .flex-direction-nav .flex-next {
+    right: 6%;
+    opacity: 1;
+     @media (max-width: 1500px) {
+       right: 40%;
+       transform: translateX(50%);
+    }
+    &.flex-disabled {
+      opacity: 0.5;
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .flexslider {
+    //making every slide same height (stretch) for nice background on every slide
+    .slides {
+      display: flex;
+    }
+
+    //ie bugfix with page_slider overlap
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .intro_layer img {
+      width: auto;
+      display: inline-block;
+    }
+
+    //uncomment if you need a shadow on your slider
+    &.slider-shadow {
+      padding-bottom: 50px;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        background: transparent;
+        z-index: 1;
+        bottom: 65px;
+        left: 10px;
+        width: 50%;
+        height: 20%;
+        max-width: 400px;
+        box-shadow: 0 25px 20px rgba(0, 0, 0, 0.3);
+        transform: rotate(-3deg);
+      }
+      &:after {
+        right: 10px;
+        left: auto;
+        transform: rotate(3deg);
+      }
+    }
+    mark {
+      color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: $lightColor;
+      -webkit-text-fill-color: transparent;
+    }
+
+  }
+
+  .intro_layers_wrapper {
+    display: flex;
+  }
+
+  .intro_after_featured_word {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 35px;
+    @media (max-width: 767px) {
+      margin-top: 20px;
+    }
+  }
+
+  .intro_layers {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  //dots - horizontal
+  .flex-control-nav {
+    position: absolute;
+    width: auto;
+    display: flex;
+    left: 50%;
+    bottom: 42px;
+    transform: translateX(-50%);
+    align-items: center;
+    li {
+      display: block;
+      padding: 0 4px;
+      a {
+        opacity: 1;
+        border-color: $lightColor;
+        &.flex-active {
+          border-color: $lightColor;
+          background: $lightColor;
+        }
+      }
+    }
+  }
+
+  //lg and bigger layout
+  @media(min-width: 300px) {
+
+    .cs,
+    .ds {
+      background-color: transparent;
+    }
+
+    //description alignment
+    //for intro with testimonials,
+    //for static intro
+    //.flexslider prefix removed
+    .container-fluid,
+    .container,
+    img + .container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+    [class*="col-"] {
+      position: static;
+      min-height: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+
+    }
+
+    // center alignment for slide description
+    .intro_layers_wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 15px;
+      left: 15px;
+      height: 100%;
+      z-index: 5;
+    }
+
+    .intro_text_top .intro_layers {
+      justify-content: flex-start;
+    }
+    .intro_text_bottom .intro_layers {
+      justify-content: flex-end;
+    }
+  }
+
+  @media (min-width: 992px) {
+    /*
+    ** Intro Section Styles
+    */
+
+    .page_slider {
+      position: relative;
+      overflow: hidden;
+      //fix slider bug on small screens
+      clear: both;
+      & > img {
+        width: 100%;
+      }
+
+      h3 {
+        font-size: 2em;
+        margin: 0;
+        line-height: 1;
+      }
+      h4 {
+        font-size: 1.5em;
+        margin: 0;
+      }
+      p {
+        font-size: 1.2em;
+        margin: 0;
+      }
+
+      @media(min-width: 992px) {
+        h3 {
+          font-size: 3em;
+        }
+        h4 {
+          font-size: 2.5em;
+        }
+        p {
+          font-size: 1.7em;
+        }
+      }
+
+      .flex-direction-nav .flex-prev {
+        left: 2%;
+        opacity: 1;
+      }
+      .flex-direction-nav .flex-next {
+        right: 2%;
+        opacity: 1;
+      }
+
+      .flexslider {
+        //making every slide same height (stretch) for nice background on every slide
+        .slides {
+          display: flex;
+        }
+
+        //ie bugfix with page_slider overlap
+        &:before,
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+
+        .intro_layer img {
+          width: auto;
+          display: inline-block;
+        }
+
+        //uncomment if you need a shadow on your slider
+        &.slider-shadow {
+          padding-bottom: 50px;
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            background: transparent;
+            z-index: 1;
+            bottom: 65px;
+            left: 10px;
+            width: 50%;
+            height: 20%;
+            max-width: 400px;
+            box-shadow: 0 25px 20px rgba(0, 0, 0, 0.3);
+            transform: rotate(-3deg);
+          }
+          &:after {
+            right: 10px;
+            left: auto;
+            transform: rotate(3deg);
+          }
+        }
+      }
+
+      .intro_layers_wrapper {
+        display: flex;
+      }
+
+      .intro_after_featured_word {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        @media(max-width: 400px) {
+          display: none;
+        }
+      }
+
+      .intro_layers {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+
+      }
+
+      //dots - horizontal
+      .flex-control-nav {
+        position: absolute;
+        width: 100%;
+        bottom: 55px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        @media (max-width: 991px) {
+          display: none;
+        }
+
+        li {
+          display: block;
+          padding-top: 6px;
+          padding-bottom: 6px;
+          a {
+            border-color: $lightColor;
+            background: $lightColor;
+            opacity: 0.5;
+            &.flex-active {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      //lg and bigger layout
+      @media(min-width: 300px) {
+
+        .cs,
+        .ds {
+          background-color: transparent;
+        }
+
+        .container-fluid,
+        .container,
+        img + .container {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+
+        }
+
+        [class*="col-"] {
+          position: static;
+          min-height: 0;
+          margin-top: 0;
+          margin-bottom: 0;
+
+        }
+
+        // center alignment for slide description
+        .intro_layers_wrapper {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 15px;
+          left: 15px;
+          height: 100%;
+          z-index: 5;
+
+          @media (min-width: 600px) {
+            .boxed & {
+              padding-left: 60px;
+              padding-right: 60px;
+            }
+          }
+        }
+
+        .intro_text_top .intro_layers {
+          justify-content: flex-start;
+        }
+        .intro_text_bottom .intro_layers {
+          justify-content: flex-end;
+        }
+
+      }
+
+      @media (min-width: 992px) {
+
+        .flex-direction-nav {
+          display: none;
+        }
+
+        .intro_layers_wrapper {
+          padding: 100px 0;
+        }
+      }
+
+      //md and smaller - static container on small device
+      @media (max-width: 991px) {
+        & {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  //md and smaller - static container on small device
+  @media (max-width: 991px) {
+    & {
+      text-align: center;
+    }
+  }
+
+  .intro_featured_word > * {
+    font-size: 30px;
+    line-height: 1;
+    text-shadow: 0 0 7px rgba(black, 0.2);
+    @media (min-width: 768px) {
+      font-size: 50px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 115px;
+    }
+  }
+
+  .intro-layer {
+      &.fs-56 {
+        > * {
+          font-size: 56px;
+          @media (max-width: 1199px) {
+            font-size: 30px;
+            line-height: 1;
+            margin-top: 10px;
+          }
+        }
+      }
+      &.slide-subheading {
+        margin-bottom: -33px;
+      }
+     + .intro-layer {
+      margin-top: 40px;
+    }
+  }
+
+  li.text-center {
+    .intro_layers-buttons {
+      justify-content: center;
+    }
+  }
+
+  .intro-button-layer {
+    margin-top: 1.7em;
+    .intro-layer {
+      margin-top: 0 !important;
+    }
+    .btn.btn-big {
+      @media (min-width: 768px) {
+        line-height: 24px;
+        padding: .9em 3.5em;
+      }
+      @media (min-width: 1200px) {
+        padding-left: 6em;
+        padding-right: 6em;
+      }
+    }
+  }
+
+  .slides li .intro_layers_wrapper.social_wrapper {
+    max-width: 100%;
+    top: 0;
+    right: 50px;
+    left: auto;
+    @media (max-width: 767px) {
+      display: none;
+    }
+    @media (min-width: 992px) and (max-width: 1399px) {
+      right: 15px;
+    }
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+      > a {
+        margin: 12px 0;
+        color: $lightColor;
+        &:hover {
+          color: $colorMain;
+        }
+      }
+    }
+  }
+}
+
+.page_slider.home-slide02 {
+  .slides > li {
+    min-height: 500px;
+  }
+  .intro_layers_wrapper {
+    max-width: 100%;
+    @media (min-width: 768px) {
+      max-width: 50%;
+    }
+    @media (min-width: 1399px) {
+      max-width: 40%;
+      top: 30px;
+    }
+  }
+  .intro-layer + .intro-layer {
+    margin-top: 33px;
+  }
+  .intro-button-layer {
+    margin-top: 0;
+    @media (min-width: 1200px) {
+      margin-top: 20px;
+    }
+    .btn.btn-big {
+      padding: 21px 51px;
+      line-height: 1;
+    }
+    @media (max-width: 991px) {
+      .intro-layer .btn {
+        min-width: auto;
+        padding: 16px 24px;
+      }
+    }
+  }
+  .flex-control-nav {
+    flex-direction: column;
+    align-items: unset;
+    bottom: 20px;
+    left: 15px;
+    transform: translateX(0);
+    counter-reset: count;
+    @media (min-width: 1400px) {
+      bottom: 43px;
+      left: 49px;
+    }
+    li {
+      padding: 6px 0 7px;
+      > a {
+        position: relative;
+        width: 50px;
+        height: 2px;
+        border: 0;
+        border-radius: 10px;
+        background-color: $lightColor;
+        transition: .3s ease-in-out;
+        &:before {
+          color: $lightColor;
+          content: counter(count);
+          counter-increment: count;
+          font-size: 16px;
+          font-weight: 700;
+          position: absolute;
+          left: auto;
+          top: 1px;
+          right: -23px;
+          transition: .5s all;
+          z-index: -1;
+          opacity: 0;
+        }
+        &.flex-active,
+        &:hover {
+          width: 80px;
+          background-color: $colorMain2;
+        }
+        &.flex-active:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.page_slider li {
+  &.text-center .intro_layers.intro-button-layer {
+    justify-content: center;
+  }
+  &.text-right .intro_layers.intro-button-layer {
+    justify-content: flex-end;
+  }
+  .intro_layers.intro-button-layer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: -1px;
+    > * {
+      margin-bottom: 10px;
+      @media (max-width: 575px) {
+        width: 100%;
+      }
+      + * {
+        margin-left: 34px;
+        @media (max-width: 575px) {
+        margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.page_slider.theme-slide2 {
+  &.slide_img_scale {
+    @media (min-width: 1600px) {
+    .image-slide-wrap {
+      img {
+        transform: scale(1.06);
+        position: relative;
+        left: -33px;
+        bottom: 23px;
+      }
+    }
+    .content-slide-wrap {
+        margin-top: -57px;
+      }
+    }
+  }
+  .image-slide-wrap {
+    padding: 0;
+  }
+  .content-slide-wrap .intro_layers {
+    @media (min-width: 992px) and (max-width: 1399px) {
+      padding-right: 15px;
+    }
+  }
+  .slides > li {
+    min-height: 500px;
+    @media (min-width: 992px) {
+      min-height: 700px;
+    }
+  }
+  .intro_layers_wrapper {
+    @media (max-width: 991px) {
+      align-items: center !important;
+      .image-slide-wrap {
+        display: none;
+      }
+    }
+  }
+  .intro-layer + .intro-layer {
+    margin-top: 33px;
+  }
+  .intro-button-layer {
+    margin-top: 20px;
+    .btn.btn-big {
+      line-height: 1;
+      padding: 21px 51px;
+    }
+  }
+  .flexslider-overlay {
+    opacity: 0.95;
+  }
+  .silde-title-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 56%;
+    background-color: $colorMain;
+    clip-path: polygon(0 0, 46.3% 0, 100% 100%, 0% 100%);
+    pointer-events: none;
+    @media (max-width: 991px) {
+      display: none;
+    }
+    p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 160px;
+      font-weight: 900;
+      line-height: 1;
+      text-transform: uppercase;
+      position: absolute;
+      top: 35px;
+      left: -11px;
+      opacity: 0.03;
+    }
+  }
+  .flex-control-nav {
+    flex-direction: column;
+    align-items: unset;
+    top: 55%;
+    bottom: auto;
+    left: 58px;
+    transform: translateY(-50%);
+    counter-reset: count;
+    @media(max-width: 991px) {
+      flex-direction: row;
+      top: auto;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    li {
+      padding: 0;
+      > a {
+        position: relative;
+        width: 2px;
+        height: 30px;
+        border: 0;
+        border-radius: 10px;
+        background-color: $lightColor;
+        margin-bottom: -1px;
+        opacity: 0.3;
+        transition: .3s ease-in-out;
+        @media(max-width: 991px) {
+          width: 30px;
+          height: 2px;
+        }
+        &.flex-active,
+        &:hover {
+          background-color: $colorMain2;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .scroll-link {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 41%;
+    left: 45px;
+    writing-mode: tb-rl;
+    z-index: 10;
+    @media(max-width: 991px) {
+      writing-mode: inherit;
+      top: auto;
+      bottom: 40px;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+    a h6 {
+      color: $lightColor;
+      margin: 0;
+      transition: 0.15s;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

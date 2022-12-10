@@ -1,0 +1,27 @@
+/*
+** Signature
+*/
+
+.fw-theme-signature {
+  display: flex;
+  align-items: center;
+  .author-image {
+    max-width: 70px;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .author-bio {
+    margin-top: 10px;
+    margin-left: 20px;
+    .author-name {
+      margin-bottom: 0;
+    }
+    .author-position {
+      font-size: 14px;
+    }
+  }
+  .signature-image {
+    margin-left: 20px;
+  }
+}

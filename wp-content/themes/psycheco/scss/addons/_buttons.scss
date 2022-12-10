@@ -1,0 +1,271 @@
+/*
+** Buttons
+ */
+
+.btn {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 16px 51px;
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: 0;
+  white-space: normal;
+  transition: all 0.3s ease-in-out 0s;
+  //for icons
+  &.round,
+  &.rounded {
+    padding: 23px;
+    line-height: 1;
+  }
+  &.btn-wide {
+    min-width: 180px;
+  }
+  &.btn-small {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  &.btn-big {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn-secondary {
+  border-color: $borderColor;
+  color: $darkColor;
+}
+
+/*color background buttons*/
+.btn-maincolor,
+.btn-maincolor2,
+.btn-maincolor3,
+.btn-dark {
+  color: $lightColor;
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.btn-maincolor {
+  background-color: $colorMain;
+  border-color: $colorMain;
+  &:hover {
+    color: $colorMain;
+  }
+}
+
+.btn-maincolor2 {
+  background-color: $colorMain2;
+  border-color: $colorMain2;
+  &:hover {
+    color: $colorMain2;
+  }
+}
+
+.btn-maincolor3 {
+  background-color: $colorMain3;
+  border-color: $colorMain3;
+  &:hover {
+    color: $colorMain3;
+  }
+}
+
+.btn-dark {
+  background-color: $darkColor;
+  border-color: $darkColor;
+  &:hover {
+    color: $darkgreyColor;
+  }
+}
+
+/*color outline buttons*/
+.btn-outline-maincolor,
+.btn-outline-maincolor2,
+.btn-outline-maincolor3,
+.btn-outline-dark {
+  background-color: transparent;
+  &:hover {
+    color: $lightColor
+  }
+}
+
+.btn-outline-maincolor {
+  color: $colorMain;
+  border-color: $colorMain;
+  &:hover {
+    background-color: $colorMain;
+  }
+}
+
+.btn-outline-maincolor2 {
+  color: $colorMain2;
+  border-color: $colorMain2;
+  &:hover {
+    background-color: $colorMain2;
+  }
+}
+
+.btn-outline-maincolor3 {
+  color: $colorMain3;
+  border-color: $colorMain3;
+  &:hover {
+    background-color: $colorMain3;
+  }
+}
+
+.btn-outline-dark {
+  color: $darkColor;
+  border-color: $darkColor;
+  &:hover {
+    background-color: $darkColor;
+  }
+}
+
+//Dark section buttons style
+.ds {
+  .btn-dark {
+    color: $darkColor;
+    background-color: $lightColor;
+    border-color: $lightColor;
+    &:hover {
+      background-color: transparent;
+      color: $lightColor;
+    }
+  }
+
+  .btn-outline-dark {
+    border-color: $lightColor;
+    color: $lightColor;
+    &:hover {
+      color: $darkColor;
+      background-color: $lightColor;
+    }
+  }
+
+}
+
+//Color section buttons style
+.cs:not(.cs2):not(.cs3) {
+  .btn-maincolor {
+    background-color: $lightColor;
+    border-color: $lightColor;
+    color: $darkColor;
+    &:hover {
+      background-color: transparent;
+      color: $lightColor;
+    }
+  }
+  .btn-outline-maincolor {
+    border-color: $lightColor;
+    color: $lightColor;
+    &:hover {
+      color: $darkColor;
+      background-color: $lightColor;
+    }
+  }
+}
+
+.cs.cs2 {
+  .btn-maincolor2 {
+    background-color: $lightColor;
+    border-color: $lightColor;
+    color: $darkColor;
+    &:hover {
+      background-color: transparent;
+      color: $lightColor;
+    }
+  }
+  .btn-outline-maincolor2 {
+    border-color: $lightColor;
+    color: $lightColor;
+    &:hover {
+      color: $darkColor;
+      background-color: $lightColor;
+    }
+  }
+}
+
+.cs.cs3 {
+  .btn-maincolor3 {
+    background-color: $lightColor;
+    border-color: $lightColor;
+    color: $darkColor;
+    &:hover {
+      background-color: transparent;
+      color: $lightColor;
+    }
+  }
+  .btn-outline-maincolor3 {
+    border-color: $lightColor;
+    color: $lightColor;
+    &:hover {
+      color: $darkColor;
+      background-color: $lightColor;
+    }
+  }
+}
+
+
+.wp-block-button {
+  margin-bottom: 10px;
+  .wp-block-button__link {
+    border: 2px solid #32373c;
+    color: $lightColor !important;
+    &:hover {
+      background-color: transparent;
+      color: #32373c !important;
+    }
+  }
+  &.is-style-outline .wp-block-button__link {
+    color: #32373c !important;
+    border-color: #32373c;
+    &:hover {
+      background-color: #32373c;
+      color: $lightColor !important;
+    }
+  }
+  &.is-style-squared {
+    a {
+      border-radius: 0;
+    }
+  }
+}
+
+.btn-link {
+  font-family: 'Playfair Display', sans-serif;
+  color: $fontColor;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  &:before {
+    content: '';
+    background-color: $colorMain2;
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    bottom: 4px;
+    left: -5px;
+    z-index: -1;
+    transition: all 0.3s linear;
+  }
+  &:hover {
+    color: $fontColor;
+    text-decoration: none;
+    &:before {
+      width: calc(100% + 10px);
+      transition: width 0.6s cubic-bezier(.68,-.55,.265,1.55);
+    }
+  }
+}
